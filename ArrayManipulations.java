@@ -40,17 +40,56 @@ public class ArrayManipulations {
     }
     static int secondMax(int[] data){
         int secondMax=0, mx=0;
-        mx=Arrays.
+        mx=findMx(data);
         for(int i=0;i<data.length;i++){
             if(data[i]==mx){
                 data[i]=Integer.MIN_VALUE;
             }
-            System.out.println(data[i]);
         }
-        System.out.println(Arrays.toString(data));
         secondMax=findMx(data);
-        System.out.println(secondMax);
         return secondMax;
+    }
+
+    static int findMin(int[] data){
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<data.length;i++){
+            if(data[i]<min){
+                min=data[i];
+            }
+        }
+        return min;
+    }
+    static int secondMin(int[] data){
+        int secondMin=0, min=0;
+        min=findMin(data);
+        for(int i=0;i<data.length;i++){
+            if(data[i]==min){
+                data[i]=Integer.MAX_VALUE;
+            }
+        }
+        secondMin=findMin(data);
+        return secondMin;
+    }
+    static int firstRepeatedElement(int[] data){
+        for(int i=0;i<data.length;i++){
+            for(int j=i+1;j<data.length;j++){
+                if(data[i]==data[j]){
+                    return data[i];
+                }
+            }
+        }
+        return -1;
+    }
+    static int lastRepeatedElement(int[] data){
+        int ans=-1;
+        for(int i=0;i<data.length;i++){
+            for(int j=i+1;j<data.length;j++){
+                if(data[i]==data[j]){
+                    ans=data[i];
+                }
+            }
+        }
+        return ans;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -61,7 +100,10 @@ public class ArrayManipulations {
         for(int i=0;i<elements.length;i++){
             elements[i]=sc.nextInt();
         }
-        System.out.println("The unique value among array is "+findUnique(elements));
-        System.out.println("The second Maximum value of array is  "+secondMax(elements));
+        System.out.println("The unique value among array is "+findUnique(elements.clone()));
+        System.out.println("The second Maximum value of array is  "+secondMax(elements.clone()));
+        System.out.println("The second minimum value of array is  "+secondMin(elements.clone()));
+        System.out.println("The first repeated number in array  "+firstRepeatedElement(elements.clone()));
+        System.out.println("The last repeated number in array  "+lastRepeatedElement(elements.clone()));
     }
 }
