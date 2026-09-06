@@ -1,6 +1,4 @@
 /*
-    Some Basic Problems of Array Data Structure
-    # Swapping Two Numbers
     # Reversing An Array
     # Rotate an array by k steps (along with space optimization approach)
     # Check if a number present in array or not and answer queries corresponding to it 
@@ -9,12 +7,8 @@
 
 import java.util.Scanner;
 
-public class BasicProblemsOfArrays{
-
-    static void swapTwoNum(int[] array){
-
-    }
-
+public class BasicProblemsOfArray {
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter size of Array : ");
