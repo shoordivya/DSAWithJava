@@ -6,7 +6,6 @@
 */
 
 import java.util.Scanner;
-
 public class BasicProblemsOfArray {
 
     static void reverseOrignalArray(int[] data) {
@@ -39,6 +38,11 @@ public class BasicProblemsOfArray {
         }
         System.out.println("After Reversing Array : ");
         printArray(ans);
+    }
+
+    static void rotateArrayByKSteps(int[] data,int k){
+        int size=data.length;
+
     }
 
     public static void main(String[] args) {
