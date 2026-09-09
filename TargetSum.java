@@ -6,6 +6,8 @@
 
 import java.util.Scanner;
 
+import arraysutils.SomeArraysMethods;
+
 public class TargetSum {
 
     static int pairSum(int[] data, int target) {
@@ -37,16 +39,11 @@ public class TargetSum {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the size pf array : ");
-        int size = sc.nextInt();
-        int[] elements = new int[size];
-        System.out.println("Enter " + size + " elements of array : ");
-        for (int i = 0; i < size; i++) {
-            elements[i] = sc.nextInt();
-        }
+        int[] elements = SomeArraysMethods.createArray();
         System.out.print("Enter the target value : ");
         int target = sc.nextInt();
         System.out.println("Pair Sum count is : " + pairSum(elements, target));
         System.out.println("Triplet Sum count is : " + tripletSum(elements, target));
+        sc.close();
     }
 }

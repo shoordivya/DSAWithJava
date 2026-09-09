@@ -7,8 +7,8 @@
     # Given an array 'a' consisting of integers. Return the last value that is repeating in this array. If no values is being repeated, return -1.
 
 */
-import java.util.Arrays;
-import java.util.Scanner;
+
+import arraysutils.SomeArraysMethods;
 
 public class ArrayManipulations {
     
@@ -92,14 +92,7 @@ public class ArrayManipulations {
         return ans;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the size of array : ");
-        int size = sc.nextInt();
-        int[] elements = new int[size];
-        System.out.println("Enter "+size+" elements for array : ");
-        for(int i=0;i<elements.length;i++){
-            elements[i]=sc.nextInt();
-        }
+        int[] elements = SomeArraysMethods.createArray();
         System.out.println("The unique value among array is "+findUnique(elements.clone()));
         System.out.println("The second Maximum value of array is  "+secondMax(elements.clone()));
         System.out.println("The second minimum value of array is  "+secondMin(elements.clone()));

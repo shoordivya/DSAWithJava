@@ -10,7 +10,7 @@
 
 */
 import java.util.Scanner;
-
+import arraysutils.*;
 public class ArraysBasics {
 
     private void sumOfAllElements(int[] data) {
@@ -73,13 +73,8 @@ public class ArraysBasics {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArraysBasics obj = new ArraysBasics();
-        System.out.println("Enter Size of Array : ");
-        int size = sc.nextInt();
-        int[] elements = new int[size];
-        System.out.println("Enter " + size + " Elements of array : ");
-        for (int i = 0; i < size; i++) {
-            elements[i] = sc.nextInt();
-        }
+
+        int[] elements = SomeArraysMethods.createArray();
         obj.sumOfAllElements(elements);
         obj.maxElement(elements);
         System.out.print("Enter element which you want to search : ");
