@@ -1,7 +1,6 @@
 /*
     # Reversing An Array
     # Check if a number present in array or not and answer queries corresponding to it 
-
 */
 import arraysutils.SomeArraysMethods;
 public class BasicProblemsOfArray {
